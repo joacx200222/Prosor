@@ -1,0 +1,670 @@
+create database Prosor
+
+USE Prosor
+
+---//// TABLE alumno ////----------
+
+CREATE TABLE alumno (
+    id_alumno            INTEGER NOT NULL,
+    nivel_estudio        VARCHAR(300),
+    intereses            VARCHAR(300),
+    direccion            VARCHAR(300),
+    sexo                 VARCHAR(1),
+    id_categoria_usuario INTEGER NOT NULL,
+    cod_postal           INTEGER NOT NULL
+);
+
+-----------DATOS ALUMNO------------------------------------------
+
+
+
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (1, 'Escuela Completa', 'Quimica', 'Calle Los puentes de Oro', 'M', 101, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (2, 'Escuela Completa', 'Quimica', 'Calle El Taladro 147', 'F', 101, 15019);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (3, 'Escuela Completa', 'Fisica', 'Av. La Espada 203', 'M', 102, 150175);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (4, 'Escuela Completa', 'Quimica', 'Calle Los puentes de Oro', 'M', 101, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (5, 'Escuela Completa', 'Quimica', 'Calle El Taladro 147', 'F', 101, 15019);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (6, 'Escuela Completa', 'Fisica', 'Av. La Espada 203', 'M', 102, 150175);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (7, 'Escuela Completa', 'Diseño urbano, Historia del arte', 'Plaza de los Constructores 12', 'M', 101, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (8, 'Escuela Completa', 'Psicología clínica, Neurociencia', 'Calle de la Mente 33', 'F', 17, 15019);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (9, 'Grado en Ingeniería Informática', 'Seguridad informática, Redes', 'Calle de la Computación 101', 'M', 101, 15046);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (10, 'Grado en Bellas Artes', 'Pintura, Escultura', 'Calle de la Creatividad 56', 'F', 101, 12175);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (11, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (12, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 101, 15011);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (13, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 101, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (14, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 102, 15046);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (15, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 102, 15019);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (16, 'Grado en Bellas Artes', 'Pintura, Escultura', 'Calle de la Creatividad 56', 'F', 101, 12175);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (17, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15011);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (18, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 101, 15011);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (19, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 101, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (20, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 101, 15046);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (21, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 101, 10523);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (22, 'Grado en Bellas Artes', 'Pintura, Escultura', 'Calle de la Creatividad 56', 'F', 101, 15023);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (23, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (24, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 102, 15011);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (25, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 102, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (26, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 102, 15046);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (27, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 102, 15023);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (28, 'Grado en Bellas Artes', 'Pintura, Escultura', 'Calle de la Creatividad 56', 'F', 102, 12175);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (29, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (30, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 101, 15023);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (31, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 101, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (32, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 101, 15046);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (33, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 101, 15023);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (34, 'Grado en Bellas Artes', 'Pintura, Escultura', 'Calle de la Creatividad 56', 'F', 101, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (35, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (36, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 102, 15011);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (37, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 102, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (38, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 101, 15019);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (39, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 102, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (40, 'Grado en Bellas Artes', 'Pintura, Escultura', 'Calle de la Creatividad 56', 'F', 102, 12175);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (41, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (42, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 101, 15011);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (43, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 102, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (44, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 101, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (45, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 101, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (46, 'Grado en Bellas Artes', 'Pintura, Escultura', 'Calle de la Creatividad 56', 'F', 101, 12175);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (47, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15083);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (48, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 101, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (49, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 102, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (50, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 102, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (51, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 102, 15083);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (52, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 102, 15083);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (53, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 102, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (54, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 102, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (55, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 101, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (56, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 101, 15083);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (57, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15083);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (58, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 101, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (59, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 102, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (60, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 102, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (61, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 101, 15083);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (62, 'Grado en Economía', 'Macroeconomía, Mercados financieros', 'Calle del Dinero 78', 'M', 101, 15083);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (63, 'Grado en Periodismo', 'Periodismo digital, Comunicación audiovisual', 'Avenida de las Noticias 34', 'F', 101, 15036);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (64, 'Grado en Turismo', 'Gestión turística, Hostelería', 'Calle del Viajero 90', 'M', 102, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (65, 'Grado en Ingeniería Industrial', 'Automatización, Energías renovables', 'Calle de la Industria 45', 'F', 101, 15007);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (66, 'Grado en Ciencias Ambientales', 'Conservación del medio ambiente, Sostenibilidad', 'Calle de la Ecología 67', 'M', 101, 15083);
+
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (197, 'Escuela Completa', 'Quimica', 'Calle Los puentes de Oro', 'M', 101, 15000);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL) VALUES (198, 'Escuela Completa', 'Quimica', 'Calle El Taladro 147', 'F', 101, 15019);
+INSERT INTO alumno (ID_ALUMNO, NIVEL_ESTUDIO, INTERESES , DIRECCION , SEXO , ID_CATEGORIA_USUARIO , COD_POSTAL)VALUES (199, 'Escuela Completa', 'Fisica', 'Av. La Espada 203', 'M', 102, 150175);
+
+
+
+
+
+
+
+
+SELECT* FROM ALUMNO -- VERIFICAR TABLE
+
+DROP TABLE ALUMNO -- DELETE TABLE
+
+
+---PRYMARY KEY TO ID_ALUMNO
+ALTER TABLE alumno ADD CONSTRAINT alumno PRIMARY KEY ( id_alumno );
+
+------------////////// TABLE ALUMNO_SECCION     /////////------------
+
+CREATE TABLE alumno_seccion (
+    id_alumno  INTEGER NOT NULL,
+    id_seccion INTEGER NOT NULL,
+    id_curso   INTEGER NOT NULL
+);
+
+
+---------DATOS ALUMNO SECCION ------------------
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (196,198,300000);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (196,200,330000);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (197,202,340000);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (75,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (88,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (1,190,601);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (2,191,602);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (3,192,603);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (4,193,604);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (5,194,605);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (17,195,606);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (18,196,607);
+INSERT INTO alumno_seccion (ID_ALUMNO , ID_SECCION , ID_CURSO) VALUES (19,197,608);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT* FROM alumno_seccion
+-----PRIMARY KEY TO id_alumno , id_seccion , id_curso
+ALTER TABLE alumno_seccion
+    ADD CONSTRAINT alumno_seccion_pk PRIMARY KEY ( id_alumno,
+                                                   id_seccion,
+                                                   id_curso );
+
+
+----////////// TABLE CATEGORIA  /////////////--------------
+CREATE TABLE categoria (
+    id_categoria INTEGER NOT NULL,
+    descripcion  VARCHAR(300)
+);
+
+
+--INSERT INTO 
+INSERT INTO categoria (ID_CATEGORIA, DESCRIPCION) VALUES (600, 'Deportes');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (700,'Tecnologia');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (800,'Arte');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (900,'Musica');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1000,'Lectura');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1100,'Viajes');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1200,'Cocina');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1300,'Fotografia');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1400,'Actuación');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1500,'Jardineria');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1600,'Matematicas');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1700,'Progrmacion');
+INSERT INTO CATEGORIA (ID_CATEGORIA , DESCRIPCION) VALUES (1800,'Ciencias');
+
+
+
+
+
+
+SELECT* FROM categoria -------- VISUAL CATEGORIA
+-----PRIMARY KEY TO id_categoria
+
+	
+
+---------///////////// TABLE CATEGORIA_USUARIO ///////////-------------
+CREATE TABLE categoria_usuario (
+    id_categoria_usuario INTEGER NOT NULL,
+    descripcion          VARCHAR(300)
+);
+
+
+--------INSERT INTO ---------------
+INSERT INTO categoria_usuario (id_categoria_usuario, descripcion) values (101,'Basico Alumno');
+INSERT INTO categoria_usuario (id_categoria_usuario, descripcion) values (102,'Premium Alumno');
+INSERT INTO categoria_usuario (id_categoria_usuario, descripcion) values (201,'Basico Profesor');
+INSERT INTO categoria_usuario (id_categoria_usuario, descripcion) values (202,'Premium Profesor');
+
+SELECT* FROM categoria_usuario; -- VISUAL 
+    
+
+-----PRIMARY KEY TO id_categoria
+ALTER TABLE categoria_usuario ADD CONSTRAINT categoria_usuario_pk PRIMARY KEY ( id_categoria_usuario );
+
+
+---------/////// TABLE CURSO //////////----------------
+CREATE TABLE curso (
+    id_curso     INTEGER NOT NULL,
+    descripcion  VARCHAR(300),
+    id_categoria INTEGER NOT NULL
+);
+
+
+--------INSERTO INTO
+
+INSERT INTO curso(id_curso,descripcion ,id_categoria) values(100100,'Futbol',0600);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (100200,'Natacion',0600);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (100300,'Basquet',0600);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (104000,'Arduinos',0700);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (105000,'Raspberry',0700);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (106000,'Dibuja y Pintura',0800);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (107000,'Carpinteria', 0800);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (108000,'Guitarra',0900);
+INSERT INTO curso(id_curso,descripcion ,id_categoria) values(109000,'Organo',0900);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (110000,'Cuentos',01000);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (120000,'Historias Paranormales',01000);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (130000,'Arma tu presupuesto',01100);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (140000,'Resposteria',01200);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (150000,'Pastas',01200);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (160000,'Platos Marinos',01200);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (170000,'Platos Criollos',01200);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11200,'Teoria del Color',01300);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11200,'Iluminacion',01300);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Edicion',01300);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11200,'Drama',01400);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11200,'Accion',0140);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Terror',01400);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Thriller',01400);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Cultivo de Flores',01500);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Cultivo de Vegetales',01500);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Algebra',01600);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Aritmetica',01600);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Geometria',01600);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Introduccion a la Programacion',01700);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Programacion Orienta a Objetos',01700);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Ingenieria de Datos',01700);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Quimica',01800);
+INSERT INTO curso(ID_CURSO,DESCRIPCION,id_categoria) values (11300,'Fisica',01800);
+
+
+SELECT* FROM CURSO
+
+
+-----PRIMARY KEY TO id_curso
+ALTER TABLE curso ADD CONSTRAINT curso_pk PRIMARY KEY ( id_curso );
+SELECT* FROM CURSO -- VISUAL
+
+
+
+------------ ///////// TABLE DEPARTAMENTO //////////-----------------
+CREATE TABLE departamento (
+    id_departamento INTEGER NOT NULL,
+    descripcion     VARCHAR(300)
+);
+
+INSERT INTO departamento (id_departamento, descripcion) VALUES (10000, 'Lima');
+INSERT INTO departamento (id_departamento, descripcion) VALUES (04000, 'Arequipa');
+INSERT INTO departamento (id_departamento, descripcion) VALUES (06000, 'Cajamarca');
+INSERT INTO departamento (id_departamento, descripcion) VALUES (20000, 'Piura');
+
+SELECT* FROM departamento
+
+
+-----PRIMARY KEY TO id_departamento
+ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( id_departamento );
+
+
+------------- //////////// TABLE DISTRITO //-----------
+CREATE TABLE distrito (
+    cod_postal   INTEGER NOT NULL,
+    descripcion  VARCHAR(300),
+    id_provincia INTEGER NOT NULL
+);
+
+-------------INSERT INTO
+
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15000, 'La Victoria', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15019, 'San Luis', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15046, 'Lince', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15007, 'Santa Anita', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15023, 'Surco', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15011, 'Ate', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (12175, 'La Molina', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15023, 'Surco', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15036, 'Surquillo', 640);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15083, 'Jesus Maria', 640); 
+
+
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15178, 'Paramonga', 641);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15174, 'Pativilca', 641);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (15162, 'Supe', 641);
+
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (22600, 'Mariscal Caceres', 740);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04470, 'Ocoña', 740);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04410, 'Quilca', 740);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04550, 'Acari', 741);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04560, 'Bella Union', 741);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04750, 'Cahuacho', 741);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04135, 'Achoma', 742); 
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04124, 'CabanaConde', 742);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04180, 'Callalli', 742);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04710, 'Chuquibamba', 743);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04720, 'Andaray', 743);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (04805, 'Chichas', 743);
+
+
+
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06341, 'Cachachi', 840);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06345, 'Condebamba',840);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06355, 'Sitacocha', 840);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (21230, 'Cortegana', 841);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06240, 'Huasmin', 841);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06230, 'Utco', 841);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06420, 'Chilete', 842);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06435, 'San Benito', 842); 
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06430, 'Tantarica', 842);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06711, 'Callayuc', 843);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06775, 'Cujillo', 843);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (06751, 'Socota', 843);
+
+
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20431, 'Canchaque',940);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20441, 'Huancabamba',940);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20481, 'Sondor',940);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20351, 'Chalaco',941);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20400, 'Salitral',941);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20360, 'Yamango',942);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20710, 'Colan',942); 
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20720, 'El Arenal',942);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20741, 'Vichayal',943);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20120, 'Bella Vista',943);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20121, 'Marcavelica',943);
+INSERT INTO distrito (cod_postal, descripcion, id_provincia) VALUES (20130, 'Salitral',943);
+
+
+SELECT* FROM DISTRITO --- VISUAL
+
+-----PRIMARY KEY TO COD_POSTAL
+ALTER TABLE distrito ADD CONSTRAINT distrito_pk PRIMARY KEY ( cod_postal );
+
+
+---------////////////// TABLE PROFESOR ////////////-----------------
+CREATE TABLE profesor (
+    id_profesor         INTEGER NOT NULL,
+    direccion           VARCHAR(300),
+    centro_estudio      VARCHAR(300),
+    labor_empresa       VARCHAR(300),
+    nivel_estudio       VARCHAR(300),
+    anho_experiencia    VARCHAR(300),
+    cod_postal        INTEGER NOT NULL
+);
+
+----INSERT INTO --------------
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (001, 'Jr. Los Pinos 123, Miraflores', 'Universidad Nacional de Ingeniería', 'Desarrollo de Software en Empresas', 'Ingeniería en Informática', '5', 15000);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (002, 'Av. Huayna Cápac 456, San Isidro', 'Pontificia Universidad Católica del Perú', 'Gestión Empresarial y Estrategia', 'Maestría en Administración de Empresas', '6', 15019);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (003, 'Calle Las Flores 789, Barranco', 'Universidad Nacional Mayor de San Marcos', 'Consultoría Financiera para Emprendedores', 'Nivel de estudio: Finanzas Corporativas', '10', 15046);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (004, 'Jr. Los Alamos 101, Magdalena del Mar', 'Universidad de Lima', 'Analista de Datos para Empresas ', 'Ciencia de Datos', '9', 15007); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (005, 'Av. La Mar 234, Surco', 'Universidad Nacional Agraria La Molina', 'Gestión de Recursos Humanos en el Ámbito Empresarial', 'Recursos Humanos', '6', 15023);
+
+
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (006, 'Calle El Olivar 567, San Borja', 'Universidad San Ignacio de Loyola', 'Desarrollo de Aplicaciones Móviles para Empresas', 'Ingeniería de Software', '8', 15011);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (007, 'Jr. Las Palmeras 890, Chorrillos', 'Universidad Peruana Cayetano Heredia', 'Consultoría Legal para Empresas', ' Derecho Empresarial', '15', 12175);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (008, 'Av. Los Cedros 112, La Molina', 'Universidad Ricardo Palma', 'Investigación de Mercado y Competencia', 'Marketing', '13', 15023);
+
+
+
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (009, 'Calle El Olivar 567, San Borja', 'Universidad San Ignacio de Loyola', 'Desarrollo de Aplicaciones Móviles para Empresas', 'Ingeniería de Software', '8', 15036);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0010, 'Jr. Las Palmeras 890, Chorrillos', 'Universidad Peruana Cayetano Heredia', 'Consultoría Legal para Empresas', ' Derecho Empresarial', '15', 15083);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0011, 'Av. Los Cedros 112, La Molina', 'Universidad Ricardo Palma', 'Investigación de Mercado y Competencia', 'Marketing', '13', 15178);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0012, 'Calle Los Laureles 345, Pueblo Libre', 'Universidad Nacional Federico Villarreal', 'Diseño de Estrategias de Comunicación Empresarial ', 'Comunicación Corporativa', '14', 15174);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0013, 'Av. El Sol 678, Santiago de Surco', 'Universidad Tecnológica del Perú', 'Implementación de Sistemas de Seguridad Informática', 'Seguridad Informática', '12', 15162);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0014, 'Calle Los Jazmines 456, San Miguel', 'Universidad Femenina del Sagrado Corazón', 'Consultor en Optimización de Procesos Empresariales', ' Ingeniería Industrial', '11', 22600);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0015, 'Av. Los Pájaros 789, Jesús María', 'Universidad de Ciencias y Artes de América Latina', 'Desarrollo de Estrategias de Responsabilidad Social Empresarial', 'Responsabilidad Social Empresarial', '16', 04470);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0016, 'Jr. Las Orquídeas 101, Lince', 'Universidad César Vallejo', 'Innovación Tecnológica y Emprendimiento ', 'Innovación Tecnológica', '18', 04410); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0017, 'Calle Los Cerezos 234, La Victoria', 'Universidad Antonio Ruiz de Montoya', 'Especialista en Marketing Digital para Empresas ', ' Marketing ', '10', 04550); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0018, 'Av. La Luna 567, San Juan de Miraflores', 'Universidad ESAN', 'Dirección Estratégica de Empresas', 'Master en Administración de Empresas', '9', 04560); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0019, 'Jr. Los Pinos 123, Miraflores', 'Universidad Nacional de Ingeniería', 'Desarrollo de Software en Empresas', 'Ingeniería en Informática', '5', 04750);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0020, 'Av. Huayna Cápac 456, San Isidro', 'Pontificia Universidad Católica del Perú', 'Gestión Empresarial y Estrategia', 'Maestría en Administración de Empresas', '6', 04135);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0021, 'Calle Las Flores 789, Barranco', 'Universidad Nacional Mayor de San Marcos', 'Consultoría Financiera para Emprendedores', 'Nivel de estudio: Finanzas Corporativas', '10', 04124);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0022, 'Jr. Los Alamos 101, Magdalena del Mar', 'Universidad de Lima', 'Analista de Datos para Empresas ', 'Ciencia de Datos', '9', 04180); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0023, 'Av. La Mar 234, Surco', 'Universidad Nacional Agraria La Molina', 'Gestión de Recursos Humanos en el Ámbito Empresarial', 'Recursos Humanos', '6',04710);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0024, 'Calle El Olivar 567, San Borja', 'Universidad San Ignacio de Loyola', 'Desarrollo de Aplicaciones Móviles para Empresas', 'Ingeniería de Software', '8', 04720);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0025, 'Jr. Las Palmeras 890, Chorrillos', 'Universidad Peruana Cayetano Heredia', 'Consultoría Legal para Empresas', ' Derecho Empresarial', '15', 04805);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0026, 'Av. Los Cedros 112, La Molina', 'Universidad Ricardo Palma', 'Investigación de Mercado y Competencia', 'Marketing', '13', 06341);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0027, 'Calle Los Laureles 345, Pueblo Libre', 'Universidad Nacional Federico Villarreal', 'Diseño de Estrategias de Comunicación Empresarial ', 'Comunicación Corporativa', '14', 06345);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0028, 'Av. El Sol 678, Santiago de Surco', 'Universidad Tecnológica del Perú', 'Implementación de Sistemas de Seguridad Informática', 'Seguridad Informática', '12', 06355);
+
+
+
+
+
+
+
+
+
+
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0050, 'Calle Los Apolos 456 ', 'UTP', 'Consultor y Profesor en la escuela de deportes', 'Ciencias del Deporte', '11', 21230);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0051, 'Av. Los Pájaros 782, Jesús María', 'UTP', 'Coach personal ', 'Terapia Deportiva', '16', 06240);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0031, 'Jr. Las Orquídeas 1111, Lince', 'Universidad César Vallejo', 'Innovación Tecnológica y Emprendimiento ', 'Innovación Tecnológica', '18',06230); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0032, 'Calle Los Cerezos 1114, La Victoria', 'Universidad Antonio Ruiz de Montoya', 'Especialista en Marketing Digital para Empresas ', ' Marketing ', '10', 06420); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0033, 'Av. La Luna 5673, San Juan de Miraflores', 'Universidad ESAN', 'Dirección Estratégica de Empresas', 'Master en Administración de Empresas', '9', 06435); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0034, 'Jr. Los Pinos 1233, Miraflores', 'Universidad Nacional de Ingeniería', 'Desarrollo de Software en Empresas', 'Ingeniería en Informática', '5', 06430);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0035, 'Av. Huayna Cápac 45316, San Isidro', 'Pontificia Universida d Católica del Perú', 'Gestión Empresarial y Estrategia', 'Maestría en Administración de Empresas', '6', 06711);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0036, 'Calle Las Flores 7819, Barranco', 'Universidad Nacional Mayor de San Marcos', 'Consultoría Financiera para Emprendedores', 'Nivel de estudio: Finanzas Corporativas', '10', 06775);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0037, 'Jr. Los Alamos 101, Magdalena del Mar', 'Universidad de Lima', 'Analista de Datos para Empresas ', 'Ciencia de Datos', '9', 06751); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0038, 'Av. La Mar 234, Surco', 'Universidad Nacional Agraria La Molina', 'Gestión de Recursos Humanos en el Ámbito Empresarial', 'Recursos Humanos', '6', 20431);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0039, 'Calle El Olivar 567, San Borja', 'Universidad San Ignacio de Loyola', 'Desarrollo de Aplicaciones Móviles para Empresas', 'Ingeniería de Software', '8', 20441);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0040, 'Jr. Las Palmeras 890, Chorrillos', 'Universidad Peruana Cayetano Heredia', 'Consultoría Legal para Empresas', ' Derecho Empresarial', '15', 20481);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0041, 'Av. Los Cedros 112, La Molina', 'Universidad Ricardo Palma', 'Investigación de Mercado y Competencia', 'Marketing', '13', 20351);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0042, 'Calle Los Laureles 345, Pueblo Libre', 'Universidad Nacional Federico Villarreal', 'Diseño de Estrategias de Comunicación Empresarial ', 'Comunicación Corporativa', '14', 20400);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0043, 'Av. El Sol 678, Santiago de Surco', 'Universidad Tecnológica del Perú', 'Implementación de Sistemas de Seguridad Informática', 'Seguridad Informática', '12', 20360);
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0044, 'Calle Los Jazmines 456, San Miguel', 'Universidad Femenina del Sagrado Corazón', 'Consultor en Optimización de Procesos Empresariales', ' Ingeniería Industrial', '11',20710 );
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0045, 'Av. Los Pájaros 789, Jesús María', 'Universidad de Ciencias y Artes de América Latina', 'Desarrollo de Estrategias de Responsabilidad Social Empresarial', 'Responsabilidad Social Empresarial', '16', 20720);
+
+
+
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0061, 'Jr. Las Golondrinas 171, Lince', 'Universidad Nacional del Altiplano', 'Director de la Banda Los Juarez ', 'Ingenieria en Sonido, '2',15000); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0062, 'Calle Las Manzanas 151', 'Universidad Nacional de San Agustin', 'Especialista en Transformacion Artistica', 'Lincenciatura en Musica', '2', 15019); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0063, 'Av. La Luna 128', 'Universidad Nacional de Musica', 'Creador de Contenido', 'Pedagogia en Musica', '9', 20121); 
+INSERT INTO profesor (id_profesor, direccion, centro_estudio, labor_empresa, nivel_estudio, anho_experiencia, cod_postal) VALUES (0064, 'Av. El sol 1111 ', 'Universidad Nacional Pedro Ruiz Gallo', 'Compositor de musica Salsa', 'Composicion musical', '9', 20130); 
+
+
+
+SELECT* FROM PROFESOR -- VISUAL
+
+
+-----PRIMARY KEY TO ID_PROFESOR
+ALTER TABLE profesor ADD CONSTRAINT profesor_pk PRIMARY KEY ( id_profesor );
+
+
+
+----//// TABLE PROVINCIA ///////-----------------
+
+
+CREATE TABLE provincia (
+    id_provincia    INTEGER NOT NULL,
+    descripcion     VARCHAR(300),
+    id_departamento INTEGER NOT NULL
+);
+
+---------- INSERT INTO ------------------
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (640, 'Lima', 10000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (641, 'Barranca', 10000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (740, 'Camana', 04000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (741, 'Caraveli', 04000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (742, 'Caylloma', 04000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (743, 'Condesuyos', 04000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (840, 'Cajabamba', 06000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (841, 'Celendin', 06000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (842, 'Contumaza', 06000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (843, 'Cutervo', 06000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (940, 'Huancabamba',20000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (941, 'Morropon', 20000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (942, 'Paita', 20000);
+INSERT INTO provincia (id_provincia, descripcion, id_departamento) VALUES (943, 'Sullana',20000);
+
+
+
+
+SELECT* FROM provincia  -- VISUAL
+
+DROP TABLE provincia -- DELETE TABLE (CUIDADO)
+
+
+-----PRIMARY KEY TO ID_PROVINCIA
+ALTER TABLE provincia ADD CONSTRAINT provincia_pk PRIMARY KEY ( id_provincia );
+
+
+-----------///// TABLE SECCION ////////------------
+CREATE TABLE seccion (
+    id_seccion  INTEGER NOT NULL,
+    id_curso    INTEGER NOT NULL,
+    id_profesor INTEGER
+);
+
+--------------- INSERT INTO--------------
+
+
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (101,100100,50);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (104,100200,51);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (105,100200,52);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (106,100200,52);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (107,100300,51);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (108,100300,50);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (109,104000,53);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (110,104000,9);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (111,104000,19);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (112,105000,52);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (113,105000,50);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (114,105000,13);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (115,106000,56);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (118,107000,59);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (120,108000,62);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (123,109000,63);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (126,110000,64);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (129,120000,12);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (131,120000,27);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (132,130000,32);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (133,130000,36);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (135,140000,70);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (144,150000,71);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (147,160000,70);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (150,170000,71);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (153,180000,68);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (156,190000,75);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (159,200000,76);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (162,210000,78);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (165,220000,79);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (168,230000,77);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (170,230000,78);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (171,240000,77);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (175,240000,79);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (176,250000,80);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (179,260000,81);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (181,260000,82);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (182,270000,84);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (183,270000,120);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (186,280000,85);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (187,280000,14);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (189,290000,36);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (190,290000,44);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (191,300000,86);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (194,310000,87);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (195,310000,86);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (197,320000,88);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (198,320000,54);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (199,330000,89);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (200,330000,90);
+INSERT INTO seccion (id_seccion, id_curso, id_profesor) values (202,340000,91);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----PRIMARY KEY TO id_seccion , ID_CURSO , ID_PROFESOR
+ALTER TABLE seccion ADD CONSTRAINT seccion_pk PRIMARY KEY ( id_seccion,
+                                                            id_curso );
+
+ALTER TABLE alumno
+    ADD CONSTRAINT alumno_categoria_usuario_fk FOREIGN KEY ( id_categoria_usuario )
+        REFERENCES categoria_usuario ( id_categoria_usuario );
+
+ALTER TABLE alumno
+    ADD CONSTRAINT alumno_distrito_fk FOREIGN KEY ( cod_postal )
+        REFERENCES distrito ( cod_postal );
+
+ALTER TABLE alumno_seccion
+    ADD CONSTRAINT alumno_seccion_alumno_fk FOREIGN KEY ( id_alumno )
+        REFERENCES alumno ( id_alumno );
+
+ALTER TABLE alumno_seccion
+    ADD CONSTRAINT alumno_seccion_seccion_fk FOREIGN KEY ( id_seccion,
+                                                           id_curso )
+        REFERENCES seccion ( id_seccion,
+                             id_curso );
+
+ALTER TABLE curso
+    ADD CONSTRAINT curso_categoria_fk FOREIGN KEY ( id_categoria )
+        REFERENCES categoria ( id_categoria );
+
+ALTER TABLE distrito
+    ADD CONSTRAINT distrito_provincia_fk FOREIGN KEY ( id_provincia )
+        REFERENCES provincia ( id_provincia );
+
+ALTER TABLE profesor
+    ADD CONSTRAINT profesor_distrito_fk FOREIGN KEY ( cod_postal )
+        REFERENCES distrito ( cod_postal );
+
+ALTER TABLE provincia
+    ADD CONSTRAINT provincia_departamento_fk FOREIGN KEY ( id_departamento )
+        REFERENCES departamento ( id_departamento );
+
+ALTER TABLE seccion
+    ADD CONSTRAINT seccion_curso_fk FOREIGN KEY ( id_curso )
+        REFERENCES curso ( id_curso );
+
+ALTER TABLE seccion
+    ADD CONSTRAINT seccion_profesor_fk FOREIGN KEY ( id_profesor )
+        REFERENCES profesor ( id_profesor );
